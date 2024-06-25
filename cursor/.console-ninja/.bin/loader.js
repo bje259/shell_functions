@@ -1,0 +1,1 @@
+"use strict";try{let{createRequire:e}=require("node:module");e("file:///Users/bradleyeuell/.cursor/extensions/wallabyjs.console-ninja-1.0.290/out/buildHook/")("./index.js").default({tool:"node"})}catch(e){console.log(e)}
