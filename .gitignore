@@ -10,3 +10,4 @@
 # editor configs
 **/.vscode/
 .idea
+nvim/.local/share/nvim/lazy/bufferline.nvim

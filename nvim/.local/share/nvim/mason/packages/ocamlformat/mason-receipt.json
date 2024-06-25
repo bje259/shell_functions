@@ -1,0 +1,1 @@
+{"secondary_sources":[],"schema_version":"1.1","name":"ocamlformat","primary_source":{"id":"pkg:opam\/ocamlformat@0.26.1","type":"registry+v1"},"links":{"bin":{"ocamlformat":"bin\/ocamlformat"},"share":{},"opt":{}},"metrics":{"start_time":1718769112384,"completion_time":1718769510201}}
