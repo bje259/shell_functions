@@ -2,11 +2,11 @@
 # custom files
 
 # temp files directories
-cache/
-log/
+**/cache/
+**/log/
 *.swp
 .DS_Store
 
 # editor configs
-.vscode
+**/.vscode/
 .idea
