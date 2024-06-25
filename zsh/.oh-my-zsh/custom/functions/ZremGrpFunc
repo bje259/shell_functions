@@ -1,0 +1,26 @@
+function ZremGrpFunc() {
+    local debug=false
+    local fInString=$1
+    if $debug; then
+        echo "remGrpFunc received: $fInString" >&2
+    fi
+    
+    if grep -q "\[.*\]" <<< "$fInString"; then  
+        local test=$(echo "$fInString")
+        local lTemp=${test%%\[*}
+        lTemp+=${test#*\]}
+    else
+        local test=$(echo "$fInString")
+        local lTemp=${test%%\(*}
+        lTemp+=${test#*\)}  
+
+    fi
+    
+    #delta1
+    local result=$(echo "$lTemp" | xargs)
+    
+    if $debug; then
+        echo "remGrpFunc returning: $result" >&2
+    fi
+    echo "$result"
+}
