@@ -13,3 +13,243 @@
 [submodule "up.zsh"]
 	path = zsh/.zsh/plugins/up.zsh
 	url = https://github.com/peterhurford/up.zsh.git
+[submodule "nvim/.local/share/nvim/lazy/markdown-preview.nvim"]
+	path = nvim/.local/share/nvim/lazy/markdown-preview.nvim
+	url = https://github.com/iamcco/markdown-preview.nvim.git
+[submodule "nvim/.local/share/nvim/lazy/which-key.nvim"]
+	path = nvim/.local/share/nvim/lazy/which-key.nvim
+	url = https://github.com/folke/which-key.nvim.git
+[submodule "nvim/.local/share/nvim/lazy/LuaSnip"]
+	path = nvim/.local/share/nvim/lazy/LuaSnip
+	url = https://github.com/L3MON4D3/LuaSnip.git
+[submodule "nvim/.local/share/nvim/lazy/nvim-notify"]
+	path = nvim/.local/share/nvim/lazy/nvim-notify
+	url = https://github.com/rcarriga/nvim-notify.git
+[submodule "nvim/.local/share/nvim/lazy/mini.surround"]
+	path = nvim/.local/share/nvim/lazy/mini.surround
+	url = https://github.com/echasnovski/mini.surround.git
+[submodule "nvim/.local/share/nvim/lazy/catppuccin"]
+	path = nvim/.local/share/nvim/lazy/catppuccin
+	url = https://github.com/catppuccin/nvim.git
+[submodule "nvim/.local/share/nvim/lazy/nvim-treesitter-textobjects"]
+	path = nvim/.local/share/nvim/lazy/nvim-treesitter-textobjects
+	url = https://github.com/nvim-treesitter/nvim-treesitter-textobjects.git
+[submodule "nvim/.local/share/nvim/lazy/mason-lspconfig.nvim"]
+	path = nvim/.local/share/nvim/lazy/mason-lspconfig.nvim
+	url = https://github.com/williamboman/mason-lspconfig.nvim.git
+[submodule "nvim/.local/share/nvim/lazy/harpoon"]
+	path = nvim/.local/share/nvim/lazy/harpoon
+	url = https://github.com/ThePrimeagen/harpoon.git
+[submodule "nvim/.local/share/nvim/lazy/persistence.nvim"]
+	path = nvim/.local/share/nvim/lazy/persistence.nvim
+	url = https://github.com/folke/persistence.nvim.git
+[submodule "nvim/.local/share/nvim/lazy/todo-comments.nvim"]
+	path = nvim/.local/share/nvim/lazy/todo-comments.nvim
+	url = https://github.com/folke/todo-comments.nvim.git
+[submodule "nvim/.local/share/nvim/lazy/nui.nvim"]
+	path = nvim/.local/share/nvim/lazy/nui.nvim
+	url = https://github.com/MunifTanjim/nui.nvim.git
+[submodule "nvim/.local/share/nvim/lazy/neo-tree.nvim"]
+	path = nvim/.local/share/nvim/lazy/neo-tree.nvim
+	url = https://github.com/nvim-neo-tree/neo-tree.nvim.git
+[submodule "nvim/.local/share/nvim/lazy/mini.ai"]
+	path = nvim/.local/share/nvim/lazy/mini.ai
+	url = https://github.com/echasnovski/mini.ai.git
+[submodule "nvim/.local/share/nvim/lazy/telescope-fzf-native.nvim"]
+	path = nvim/.local/share/nvim/lazy/telescope-fzf-native.nvim
+	url = https://github.com/nvim-telescope/telescope-fzf-native.nvim.git
+[submodule "nvim/.local/share/nvim/lazy/nvim-lspconfig"]
+	path = nvim/.local/share/nvim/lazy/nvim-lspconfig
+	url = https://github.com/neovim/nvim-lspconfig.git
+[submodule "nvim/.local/share/nvim/lazy/SchemaStore.nvim"]
+	path = nvim/.local/share/nvim/lazy/SchemaStore.nvim
+	url = https://github.com/b0o/SchemaStore.nvim.git
+[submodule "nvim/.local/share/nvim/lazy/copilot.lua"]
+	path = nvim/.local/share/nvim/lazy/copilot.lua
+	url = https://github.com/zbirenbaum/copilot.lua.git
+[submodule "nvim/.local/share/nvim/lazy/dashboard-nvim"]
+	path = nvim/.local/share/nvim/lazy/dashboard-nvim
+	url = https://github.com/nvimdev/dashboard-nvim.git
+[submodule "nvim/.local/share/nvim/lazy/cmp_luasnip"]
+	path = nvim/.local/share/nvim/lazy/cmp_luasnip
+	url = https://github.com/saadparwaiz1/cmp_luasnip.git
+[submodule "nvim/.local/share/nvim/lazy/nvim-spectre"]
+	path = nvim/.local/share/nvim/lazy/nvim-spectre
+	url = https://github.com/nvim-pack/nvim-spectre.git
+[submodule "nvim/.local/share/nvim/lazy/flash.nvim"]
+	path = nvim/.local/share/nvim/lazy/flash.nvim
+	url = https://github.com/folke/flash.nvim.git
+[submodule "nvim/.local/share/nvim/lazy/none-ls.nvim"]
+	path = nvim/.local/share/nvim/lazy/none-ls.nvim
+	url = https://github.com/nvimtools/none-ls.nvim.git
+[submodule "nvim/.local/share/nvim/lazy/ts-comments.nvim"]
+	path = nvim/.local/share/nvim/lazy/ts-comments.nvim
+	url = https://github.com/folke/ts-comments.nvim.git
+[submodule "nvim/.local/share/nvim/lazy/noice.nvim"]
+	path = nvim/.local/share/nvim/lazy/noice.nvim
+	url = https://github.com/folke/noice.nvim.git
+[submodule "nvim/.local/share/nvim/lazy/tokyonight.nvim"]
+	path = nvim/.local/share/nvim/lazy/tokyonight.nvim
+	url = https://github.com/folke/tokyonight.nvim.git
+[submodule "nvim/.local/share/nvim/lazy/mini.animate"]
+	path = nvim/.local/share/nvim/lazy/mini.animate
+	url = https://github.com/echasnovski/mini.animate.git
+[submodule "nvim/.local/share/nvim/lazy/cmp-emoji"]
+	path = nvim/.local/share/nvim/lazy/cmp-emoji
+	url = https://github.com/hrsh7th/cmp-emoji.git
+[submodule "nvim/.local/share/nvim/lazy/lazydev.nvim"]
+	path = nvim/.local/share/nvim/lazy/lazydev.nvim
+	url = https://github.com/folke/lazydev.nvim.git
+[submodule "nvim/.local/share/nvim/lazy/conform.nvim"]
+	path = nvim/.local/share/nvim/lazy/conform.nvim
+	url = https://github.com/stevearc/conform.nvim.git
+[submodule "nvim/.local/share/nvim/lazy/cmp-buffer"]
+	path = nvim/.local/share/nvim/lazy/cmp-buffer
+	url = https://github.com/hrsh7th/cmp-buffer.git
+[submodule "nvim/.local/share/nvim/lazy/nvim-ts-autotag"]
+	path = nvim/.local/share/nvim/lazy/nvim-ts-autotag
+	url = https://github.com/windwp/nvim-ts-autotag.git
+[submodule "nvim/.local/share/nvim/lazy/cmp-nvim-lsp"]
+	path = nvim/.local/share/nvim/lazy/cmp-nvim-lsp
+	url = https://github.com/hrsh7th/cmp-nvim-lsp.git
+[submodule "nvim/.local/share/nvim/lazy/vim-dadbod-ui"]
+	path = nvim/.local/share/nvim/lazy/vim-dadbod-ui
+	url = https://github.com/kristijanhusak/vim-dadbod-ui.git
+[submodule "nvim/.local/share/nvim/lazy/vim-dadbod-completion"]
+	path = nvim/.local/share/nvim/lazy/vim-dadbod-completion
+	url = https://github.com/kristijanhusak/vim-dadbod-completion.git
+[submodule "nvim/.local/share/nvim/lazy/headlines.nvim"]
+	path = nvim/.local/share/nvim/lazy/headlines.nvim
+	url = https://github.com/lukas-reineke/headlines.nvim.git
+[submodule "nvim/.local/share/nvim/lazy/gitsigns.nvim"]
+	path = nvim/.local/share/nvim/lazy/gitsigns.nvim
+	url = https://github.com/lewis6991/gitsigns.nvim.git
+[submodule "nvim/.local/share/nvim/lazy/lualine.nvim"]
+	path = nvim/.local/share/nvim/lazy/lualine.nvim
+	url = https://github.com/nvim-lualine/lualine.nvim.git
+[submodule "nvim/.local/share/nvim/lazy/plenary.nvim"]
+	path = nvim/.local/share/nvim/lazy/plenary.nvim
+	url = https://github.com/nvim-lua/plenary.nvim.git
+[submodule "nvim/.local/share/nvim/lazy/vim-be-good"]
+	path = nvim/.local/share/nvim/lazy/vim-be-good
+	url = https://github.com/theprimeagen/vim-be-good.git
+[submodule "nvim/.local/share/nvim/lazy/mini.pairs"]
+	path = nvim/.local/share/nvim/lazy/mini.pairs
+	url = https://github.com/echasnovski/mini.pairs.git
+[submodule "nvim/.local/share/nvim/lazy/lazy.nvim"]
+	path = nvim/.local/share/nvim/lazy/lazy.nvim
+	url = https://github.com/folke/lazy.nvim.git
+[submodule "nvim/.local/share/nvim/lazy/LazyVim"]
+	path = nvim/.local/share/nvim/lazy/LazyVim
+	url = https://github.com/LazyVim/LazyVim.git
+[submodule "nvim/.local/share/nvim/lazy/mini.move"]
+	path = nvim/.local/share/nvim/lazy/mini.move
+	url = https://github.com/echasnovski/mini.move.git
+[submodule "nvim/.local/share/nvim/lazy/dressing.nvim"]
+	path = nvim/.local/share/nvim/lazy/dressing.nvim
+	url = https://github.com/stevearc/dressing.nvim.git
+[submodule "nvim/.local/share/nvim/lazy/friendly-snippets"]
+	path = nvim/.local/share/nvim/lazy/friendly-snippets
+	url = https://github.com/rafamadriz/friendly-snippets.git
+[submodule "nvim/.local/share/nvim/lazy/copilot-cmp"]
+	path = nvim/.local/share/nvim/lazy/copilot-cmp
+	url = https://github.com/zbirenbaum/copilot-cmp.git
+[submodule "nvim/.local/share/nvim/lazy/toggleterm.nvim"]
+	path = nvim/.local/share/nvim/lazy/toggleterm.nvim
+	url = https://github.com/akinsho/toggleterm.nvim.git
+[submodule "nvim/.local/share/nvim/lazy/yanky.nvim"]
+	path = nvim/.local/share/nvim/lazy/yanky.nvim
+	url = https://github.com/gbprod/yanky.nvim.git
+[submodule "nvim/.local/share/nvim/lazy/nvim-lint"]
+	path = nvim/.local/share/nvim/lazy/nvim-lint
+	url = https://github.com/mfussenegger/nvim-lint.git
+[submodule "nvim/.local/share/nvim/lazy/telescope-git-submodules.nvim"]
+	path = nvim/.local/share/nvim/lazy/telescope-git-submodules.nvim
+	url = https://github.com/agoodshort/telescope-git-submodules.nvim.git
+[submodule "nvim/.local/share/nvim/lazy/nvim-web-devicons"]
+	path = nvim/.local/share/nvim/lazy/nvim-web-devicons
+	url = https://github.com/nvim-tree/nvim-web-devicons.git
+[submodule "nvim/.local/share/nvim/lazy/vim-tmux-navigator"]
+	path = nvim/.local/share/nvim/lazy/vim-tmux-navigator
+	url = https://github.com/christoomey/vim-tmux-navigator.git
+[submodule "nvim/.local/share/nvim/lazy/trouble.nvim"]
+	path = nvim/.local/share/nvim/lazy/trouble.nvim
+	url = https://github.com/folke/trouble.nvim.git
+[submodule "nvim/.local/share/nvim/lazy/luvit-meta"]
+	path = nvim/.local/share/nvim/lazy/luvit-meta
+	url = https://github.com/Bilal2453/luvit-meta.git
+[submodule "nvim/.local/share/nvim/lazy/mason.nvim"]
+	path = nvim/.local/share/nvim/lazy/mason.nvim
+	url = https://github.com/williamboman/mason.nvim.git
+[submodule "nvim/.local/share/nvim/lazy/telescope.nvim"]
+	path = nvim/.local/share/nvim/lazy/telescope.nvim
+	url = https://github.com/nvim-telescope/telescope.nvim.git
+[submodule "nvim/.local/share/nvim/lazy/indent-blankline.nvim"]
+	path = nvim/.local/share/nvim/lazy/indent-blankline.nvim
+	url = https://github.com/lukas-reineke/indent-blankline.nvim.git
+[submodule "nvim/.local/share/nvim/lazy/cmp-path"]
+	path = nvim/.local/share/nvim/lazy/cmp-path
+	url = https://github.com/hrsh7th/cmp-path.git
+[submodule "nvim/.local/share/nvim/lazy/mini.hipatterns"]
+	path = nvim/.local/share/nvim/lazy/mini.hipatterns
+	url = https://github.com/echasnovski/mini.hipatterns.git
+[submodule "nvim/.local/share/nvim/lazy/nvim-treesitter-context"]
+	path = nvim/.local/share/nvim/lazy/nvim-treesitter-context
+	url = https://github.com/nvim-treesitter/nvim-treesitter-context.git
+[submodule "nvim/.local/share/nvim/lazy/nvim-cmp"]
+	path = nvim/.local/share/nvim/lazy/nvim-cmp
+	url = https://github.com/hrsh7th/nvim-cmp.git
+[submodule "nvim/.local/share/nvim/lazy/venv-selector.nvim"]
+	path = nvim/.local/share/nvim/lazy/venv-selector.nvim
+	url = https://github.com/linux-cultist/venv-selector.nvim.git
+[submodule "nvim/.local/share/nvim/lazy/undotree"]
+	path = nvim/.local/share/nvim/lazy/undotree
+	url = https://github.com/mbbill/undotree.git
+[submodule "tmux/.config/tmux/plugins/tmux-resurrect"]
+	path = tmux/.config/tmux/plugins/tmux-resurrect
+	url = https://git::@github.com/tmux-plugins/tmux-resurrect
+[submodule "tmux/.config/tmux/plugins/tmux-sensible"]
+	path = tmux/.config/tmux/plugins/tmux-sensible
+	url = https://git::@github.com/tmux-plugins/tmux-sensible
+[submodule "tmux/.config/tmux/plugins/tpm"]
+	path = tmux/.config/tmux/plugins/tpm
+	url = https://git::@github.com/tmux-plugins/tpm
+[submodule "tmux/.config/tmux/plugins/catppuccin-tmux"]
+	path = tmux/.config/tmux/plugins/catppuccin-tmux
+	url = https://git::@github.com/dreamsofcode-io/catppuccin-tmux
+[submodule "tmux/.config/tmux/plugins/tmux-which-key"]
+	path = tmux/.config/tmux/plugins/tmux-which-key
+	url = https://git::@github.com/alexwforsythe/tmux-which-key
+[submodule "tmux/.config/tmux/plugins/vim-tmux-navigator"]
+	path = tmux/.config/tmux/plugins/vim-tmux-navigator
+	url = https://git::@github.com/christoomey/vim-tmux-navigator
+[submodule "zsh/.oh-my-zsh/custom/plugins/zsh-history-substring-search"]
+	path = zsh/.oh-my-zsh/custom/plugins/zsh-history-substring-search
+	url = https://github.com/zsh-users/zsh-history-substring-search
+[submodule "zsh/.zsh/zsh-history-substring-search"]
+	path = zsh/.zsh/zsh-history-substring-search
+	url = https://github.com/zsh-users/zsh-history-substring-search
+[submodule "zsh/.zsh/plugins/zsh-autosuggestions"]
+	path = zsh/.zsh/plugins/zsh-autosuggestions
+	url = https://github.com/zsh-users/zsh-autosuggestions.git
+[submodule "zsh/.zsh/plugins/zsh-history-substring-search"]
+	path = zsh/.zsh/plugins/zsh-history-substring-search
+	url = https://github.com/zsh-users/zsh-history-substring-search.git
+[submodule "zsh/.zsh/plugins/zsh-completions"]
+	path = zsh/.zsh/plugins/zsh-completions
+	url = https://github.com/zsh-users/zsh-completions.git
+[submodule "zsh/.zsh/plugins/zsh-github-cli"]
+	path = zsh/.zsh/plugins/zsh-github-cli
+	url = https://github.com/sudosubin/zsh-github-cli.git
+[submodule "zsh/.zsh/plugins/zsh-syntax-highlighting"]
+	path = zsh/.zsh/plugins/zsh-syntax-highlighting
+	url = https://github.com/zsh-users/zsh-syntax-highlighting.git
+[submodule "zsh/.zsh/plugins/zsh-you-should-use"]
+	path = zsh/.zsh/plugins/zsh-you-should-use
+	url = https://github.com/MichaelAquilina/zsh-you-should-use.git
+[submodule "z"]
+	path = zsh/.zsh/plugins/z
+	url = https://github.com/rupa/z.git
+[submodule "zsh-hist"]
+	path = zsh/.zsh/plugins/zsh-hist
+	url = https://github.com/marlonrichert/zsh-hist.git
