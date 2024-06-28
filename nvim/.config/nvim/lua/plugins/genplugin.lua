@@ -1,5 +1,5 @@
 return {
-  {"theprimeagen/vim-be-good"},
+  { "theprimeagen/vim-be-good" },
   -- Use <tab> for completion and snippets (supertab)
   {
     "hrsh7th/nvim-cmp",
@@ -45,9 +45,12 @@ return {
     end,
   },
   {
+    "christoomey/vim-tmux-navigator",
+    lazy = false,
+  },
+  {
     "folke/tokyonight.nvim",
     lazy = true,
     opts = { style = "night" },
   },
-
 }

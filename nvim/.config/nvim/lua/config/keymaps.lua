@@ -7,6 +7,11 @@
 -- map("n", "<C-Down>", "<cmd>resize -2<cr>", { desc = "Decrease Window Height" })
 -- map("n", "<C-Left>", "<cmd>vertical resize -2<cr>", { desc = "Decrease Window Width" })
 -- map("n", "<C-Right>", "<cmd>vertical resize +2<cr>", { desc = "Increase Window Width" })
+-- map("n", "<C-Up>", "<cmd>resize +2<cr>", { desc = "Increase Window Height" })
+vim.keymap.set("n", "<C-h>", "<cmd> TmuxNavigateLeft<CR>", { desc = "window left" })
+vim.keymap.set("n", "<C-l>", "<cmd> TmuxNavigateRight<CR>", { desc = "window right" })
+vim.keymap.set("n", "<C-j>", "<cmd> TmuxNavigateDown<CR>", { desc = "window down" })
+vim.keymap.set("n", "<C-k>", "<cmd> TmuxNavigateUp<CR>", { desc = "window up" })
 
 -- vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 vim.keymap.set("n", "<C-S-Up>", "<cmd>resize +2<cr>", { desc = "Increase Window Height" })
@@ -21,4 +26,4 @@ vim.keymap.set("n", "<C-S-Right>", "<cmd>vertical resize +2<cr>", { desc = "Incr
 -- vim.api.nvim_set_keymap('n', '<leader>p', ':Files<CR>', { noremap = true, silent = true })
 
 -- Map <Leader><Leader> to clear search highlighting
-vim.api.nvim_set_keymap('n', '<Leader><Leader>', ':nohlsearch<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<Leader><Leader>", ":nohlsearch<CR>", { noremap = true, silent = true })

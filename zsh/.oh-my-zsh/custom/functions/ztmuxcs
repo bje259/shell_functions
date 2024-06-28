@@ -1,0 +1,17 @@
+#!/bin/bash
+
+ztmuxcs() {
+  # Path to the cheat sheet file
+  CHEAT_SHEET="$HOME/.config/tmuxcheatsheet.md"
+
+  # Check if MacDown is available and open the cheat sheet with it
+  if open -Ra "MacDown"; then
+    open -a "MacDown" "$CHEAT_SHEET"
+  # If MacDown is not available, check if bat is available
+  elif command -v bat &>/dev/null; then
+    bat "$CHEAT_SHEET"
+  # Fallback to cat if neither MacDown nor bat is available
+  else
+    cat "$CHEAT_SHEET"
+  fi
+}

@@ -53,7 +53,7 @@
     #asdf                    # asdf version manager (https://github.com/asdf-vm/asdf)
     #virtualenv              # python virtual environment (https://docs.python.org/3/library/venv.html)
     #anaconda                # conda environment (https://conda.io/)
-    #pyenv                   # python environment (https://github.com/pyenv/pyenv)
+    pyenv                   # python environment (https://github.com/pyenv/pyenv)
     #goenv                   # go environment (https://github.com/syndbg/goenv)
     #nodenv                  # node.js version from nodenv (https://github.com/nodenv/nodenv)
     #nvm                     # node.js version from nvm (https://github.com/nvm-sh/nvm)
@@ -221,7 +221,7 @@
 
   ##################################[ dir: current directory ]##################################
   # Current directory background color.
-  typeset -g POWERLEVEL9K_DIR_BACKGROUND=4
+  typeset -g POWERLEVEL9K_DIR_BACKGROUND=032
   # Default current directory foreground color.
   typeset -g POWERLEVEL9K_DIR_FOREGROUND=254
   # If directory is too long, shorten some of its segments to the shortest possible unique
@@ -361,9 +361,9 @@
   #####################################[ vcs: git status ]######################################
   # Version control background colors.
   typeset -g POWERLEVEL9K_VCS_CLEAN_BACKGROUND=2
-  typeset -g POWERLEVEL9K_VCS_MODIFIED_BACKGROUND=3
+  typeset -g POWERLEVEL9K_VCS_MODIFIED_BACKGROUND=5
   typeset -g POWERLEVEL9K_VCS_UNTRACKED_BACKGROUND=2
-  typeset -g POWERLEVEL9K_VCS_CONFLICTED_BACKGROUND=3
+  typeset -g POWERLEVEL9K_VCS_CONFLICTED_BACKGROUND=9
   typeset -g POWERLEVEL9K_VCS_LOADING_BACKGROUND=8
 
   # Branch icon. Set this parameter to '\UE0A0 ' for the popular Powerline branch icon.
@@ -821,10 +821,10 @@
 
   ##################################[ disk_usage: disk usage ]##################################
   # Colors for different levels of disk usage.
-  typeset -g POWERLEVEL9K_DISK_USAGE_NORMAL_FOREGROUND=3
+  typeset -g POWERLEVEL9K_DISK_USAGE_NORMAL_FOREGROUND=2
   typeset -g POWERLEVEL9K_DISK_USAGE_NORMAL_BACKGROUND=0
   typeset -g POWERLEVEL9K_DISK_USAGE_WARNING_FOREGROUND=0
-  typeset -g POWERLEVEL9K_DISK_USAGE_WARNING_BACKGROUND=3
+  typeset -g POWERLEVEL9K_DISK_USAGE_WARNING_BACKGROUND=2
   typeset -g POWERLEVEL9K_DISK_USAGE_CRITICAL_FOREGROUND=7
   typeset -g POWERLEVEL9K_DISK_USAGE_CRITICAL_BACKGROUND=1
   # Thresholds for different levels of disk usage (percentage points).
@@ -846,7 +846,7 @@
   typeset -g POWERLEVEL9K_VI_MODE_VISUAL_BACKGROUND=4
   # Text and color for overtype (a.k.a. overwrite and replace) vi mode.
   typeset -g POWERLEVEL9K_VI_OVERWRITE_MODE_STRING=OVERTYPE
-  typeset -g POWERLEVEL9K_VI_MODE_OVERWRITE_BACKGROUND=3
+  typeset -g POWERLEVEL9K_VI_MODE_OVERWRITE_BACKGROUND=014
   # Text and color for insert vi mode.
   typeset -g POWERLEVEL9K_VI_INSERT_MODE_STRING=
   typeset -g POWERLEVEL9K_VI_MODE_INSERT_FOREGROUND=8
@@ -856,7 +856,7 @@
   ######################################[ ram: free RAM ]#######################################
   # RAM color.
   typeset -g POWERLEVEL9K_RAM_FOREGROUND=0
-  typeset -g POWERLEVEL9K_RAM_BACKGROUND=3
+  typeset -g POWERLEVEL9K_RAM_BACKGROUND=39
   # Custom icon.
   # typeset -g POWERLEVEL9K_RAM_VISUAL_IDENTIFIER_EXPANSION='⭐'
 

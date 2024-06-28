@@ -39,6 +39,7 @@ plugins=(
     zsh-interactive-cd
     toggle_key_mode
     brew
+    AWS
 )
 # plugins=()
 
@@ -346,6 +347,9 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 
 # Bind the toggle function to Ctrl+T for vi command mode
 bindkey -M vicmd '^T' toggle_key_mode
+
+
+complete -C '/usr/local/bin/aws_completer' aws
 
 export ZSH_STARTUP_COMPLETE=true
 
