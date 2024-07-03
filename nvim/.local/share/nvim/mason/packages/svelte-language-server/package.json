@@ -10,7 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "svelte-language-server": "^0.16.11",
+    "svelte-language-server": "^0.16.13",
     "typescript-svelte-plugin": "^0.3.39"
   }
 }

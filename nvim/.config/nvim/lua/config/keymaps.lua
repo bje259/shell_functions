@@ -27,3 +27,8 @@ vim.keymap.set("n", "<C-S-Right>", "<cmd>vertical resize +2<cr>", { desc = "Incr
 
 -- Map <Leader><Leader> to clear search highlighting
 vim.api.nvim_set_keymap("n", "<Leader><Leader>", ":nohlsearch<CR>", { noremap = true, silent = true })
+
+-- mapping = cmp.mapping.preset.insert({
+--      ['<C-l>'] = cmp.mapping.complete(),
+--  }),
+--

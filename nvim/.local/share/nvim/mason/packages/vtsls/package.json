@@ -10,6 +10,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@vtsls/language-server": "^0.2.3"
+    "@vtsls/language-server": "^0.2.5"
   }
 }

@@ -35,9 +35,102 @@ require("lazy").setup({
         -- "netrwPlugin",
         "tarPlugin",
         "tohtml",
-       -- "tutor",
+        -- "tutor",
         "zipPlugin",
       },
     },
   },
 })
+
+-- Ensure which-key is loaded
+local wk = require("which-key")
+
+-- Define a function to open a new buffer and set the filetype
+local function new_buffer_with_filetype(ft)
+  vim.cmd("enew") -- Open a new buffer
+  vim.cmd("setfiletype " .. ft) -- Set the filetype
+end
+
+-- Register the keybindings with which-key
+wk.register({
+  tn = {
+    name = "Temporary New Filetypes",
+    j = {
+      function()
+        new_buffer_with_filetype("json")
+      end,
+      "New buffer with JSON",
+    },
+    l = {
+      function()
+        new_buffer_with_filetype("lua")
+      end,
+      "New buffer with Lua",
+    },
+    p = {
+      function()
+        new_buffer_with_filetype("python")
+      end,
+      "New buffer with Python",
+    },
+    h = {
+      function()
+        new_buffer_with_filetype("html")
+      end,
+      "New buffer with HTML",
+    },
+    z = {
+      function()
+        new_buffer_with_filetype("zsh")
+      end,
+      "Set filetype to Zsh",
+    },
+
+    -- Add more filetypes as needed
+  },
+}, { prefix = "<leader>" }) -- Ensure which-key is loaded
+
+-- local wk = require("which-key")
+--
+-- Define a function to set filetype
+local function set_filetype(ft)
+  vim.cmd("setfiletype " .. ft)
+end
+--
+-- Register the keybindings with which-key
+wk.register({
+  t = {
+    name = "Temporary Filetypes",
+    j = {
+      function()
+        set_filetype("json")
+      end,
+      "Set filetype to JSON",
+    },
+    l = {
+      function()
+        set_filetype("lua")
+      end,
+      "Set filetype to Lua",
+    },
+    p = {
+      function()
+        set_filetype("python")
+      end,
+      "Set filetype to Python",
+    },
+    h = {
+      function()
+        set_filetype("html")
+      end,
+      "Set filetype to HTML",
+    },
+    z = {
+      function()
+        set_filetype("zsh")
+      end,
+      "Set filetype to Zsh",
+    },
+    -- Add more filetypes as needed
+  },
+}, { prefix = "<leader>" })

@@ -1,0 +1,1 @@
+{"name":"yq","metrics":{"start_time":1719731597212,"completion_time":1719731598074},"links":{"opt":{},"share":{"man\/man1\/yq.1":"yq.1"},"bin":{"yq":"yq_darwin_arm64"}},"primary_source":{"type":"registry+v1","id":"pkg:github\/mikefarah\/yq@v4.44.2"},"secondary_sources":[],"schema_version":"1.1"}

@@ -1,4 +1,4 @@
-#!/Users/bradleyeuell/.local/share/nvim/mason/packages/ruff-lsp/venv/bin/python
+#!/Users/bradleyeuell/dotfiles/nvim/.local/share/nvim/mason/packages/ruff-lsp/venv/bin/python
 # -*- coding: utf-8 -*-
 import re
 import sys
