@@ -1,1 +1,1 @@
-{"secondary_sources":[],"schema_version":"1.1","name":"ocamlformat","primary_source":{"id":"pkg:opam\/ocamlformat@0.26.1","type":"registry+v1"},"links":{"bin":{"ocamlformat":"bin\/ocamlformat"},"share":{},"opt":{}},"metrics":{"start_time":1718769112384,"completion_time":1718769510201}}
+{"secondary_sources":[],"schema_version":"1.1","links":{"share":{},"bin":{"ocamlformat":"bin\/ocamlformat"},"opt":{}},"primary_source":{"type":"registry+v1","id":"pkg:opam\/ocamlformat@0.26.1"},"metrics":{"completion_time":1720083140742,"start_time":1720083068578},"name":"ocamlformat"}

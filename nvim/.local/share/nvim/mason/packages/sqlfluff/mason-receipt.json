@@ -1,1 +1,1 @@
-{"primary_source":{"id":"pkg:pypi\/sqlfluff@3.0.7","type":"registry+v1"},"secondary_sources":[],"schema_version":"1.1","name":"sqlfluff","metrics":{"completion_time":1718684231081,"start_time":1718684209138},"links":{"bin":{"sqlfluff":"venv\/bin\/sqlfluff"},"opt":{},"share":{}}}
+{"metrics":{"completion_time":1720072735969,"start_time":1720072729356},"name":"sqlfluff","secondary_sources":[],"schema_version":"1.1","primary_source":{"type":"registry+v1","id":"pkg:pypi\/sqlfluff@3.1.0"},"links":{"bin":{"sqlfluff":"venv\/bin\/sqlfluff"},"share":{},"opt":{}}}

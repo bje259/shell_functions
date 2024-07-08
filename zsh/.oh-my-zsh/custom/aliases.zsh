@@ -16,3 +16,17 @@ alias lld='fd --hidden -l -d 1 | rg "^d.*$"'
 alias db='dune build'
 alias de='dune exec'
 alias rmdst='find . -name .DS_Store -type f -delete'
+alias tattach='tmux attach-session -t $(tmux list-sessions | fzf --preview "echo {}" | awk -F: "{print \$1}")'
+alias tma2='tmux attach-session -t $(tmux list-sessions | awk -F: "{print \$1}" | xargs -I % zsh -c "echo Session %; tmux list-windows -t %" | xargs -I {} echo {} | while IFS= read -r line; 
+do
+        if [[ $line =~ "^Session" ]]
+        then
+        currentSession="${line/#Session }"
+        echo "$line"
+        else
+        printf "%s:%s\n" "$currentSession" "$line"
+        currentWindow="${line%%:*}"
+        panes=("$(tmux list-panes -t $currentSession:$currentWindow)")
+        echo $panes | awk -v currentSession="$currentSession" -v currentWindow="$currentWindow" "{OFS=\"\" ; print currentSession,\":\"currentWindow,\".\",\$0}"
+        fi
+done | fzf --reverse | awk -F ": " "{print \$1}")'

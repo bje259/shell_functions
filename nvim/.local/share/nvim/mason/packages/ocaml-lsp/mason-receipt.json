@@ -1,1 +1,1 @@
-{"secondary_sources":[],"schema_version":"1.1","name":"ocaml-lsp","primary_source":{"id":"pkg:opam\/ocaml-lsp-server@1.17.0","type":"registry+v1"},"links":{"bin":{"ocamllsp":"bin\/ocamllsp"},"share":{},"opt":{}},"metrics":{"start_time":1718769105067,"completion_time":1718769392023}}
+{"secondary_sources":[],"schema_version":"1.1","links":{"share":{},"bin":{"ocamllsp":"bin\/ocamllsp"},"opt":{}},"primary_source":{"type":"registry+v1","id":"pkg:opam\/ocaml-lsp-server@1.17.0"},"metrics":{"completion_time":1720083123735,"start_time":1720083066199},"name":"ocaml-lsp"}

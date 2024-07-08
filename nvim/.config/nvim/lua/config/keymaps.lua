@@ -19,6 +19,13 @@ vim.keymap.set("n", "<C-S-Down>", "<cmd>resize -2<cr>", { desc = "Decrease Windo
 vim.keymap.set("n", "<C-S-Left>", "<cmd>vertical resize -2<cr>", { desc = "Decrease Window Width" })
 vim.keymap.set("n", "<C-S-Right>", "<cmd>vertical resize +2<cr>", { desc = "Increase Window Width" })
 
+vim.keymap.set("n", "<S-F5>", '<cmd>lua require"dap".continue()<CR>', { desc = "dap-continue" }) -- Start/continue
+vim.keymap.set("n", "<S-F10>", '<cmd>lua require"dap".step_over()<CR>', { desc = "dap-stepover" }) -- Step over
+vim.keymap.set("n", "<S-F11>", '<cmd>lua require"dap".step_into()<CR>', { desc = "dap-stepinto" }) -- Step into
+vim.keymap.set("n", "<S-F12>", '<cmd>lua require"dap".step_out()<CR>', { desc = "dap-stepout" }) -- Step out
+
+vim.keymap.set("n", "<leader>T", "<cmd>Telescope<CR>", { desc = "Telescope" })
+
 -- Map <C-n> to toggle NERDTree
 -- vim.api.nvim_set_keymap('n', '<C-n>', ':NERDTreeToggle<CR>', { noremap = true, silent = true })
 

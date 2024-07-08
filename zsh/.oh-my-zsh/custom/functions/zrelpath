@@ -1,0 +1,41 @@
+zrelpath() {
+    local from=$PWD
+    local to=$1
+
+    # Convert both paths to their absolute canonical form
+    local from_abs=$(cd "$from"; pwd -P)
+    local to_abs=$(cd "$to"; pwd -P)
+
+    # Find the common prefix
+    local common_part=$from_abs
+    local result=""
+
+    while [[ "${to_abs#$common_part}" == "$to_abs" ]]; do
+        # No match, move up one level
+        common_part=$(dirname "$common_part")
+        # Add one level to the result path
+        if [[ -z "$result" ]]; then
+            result=".."
+        else
+            result="../$result"
+        fi
+    done
+
+    if [[ "$common_part" == "/" ]]; then
+        # Special case for root directory
+        result="$result/"
+    fi
+
+    # Remove the common prefix from the target path
+    local forward_part="${to_abs#$common_part}"
+
+    # Combine both parts
+    if [[ -n "$result" ]] && [[ -n "$forward_part" ]]; then
+        result="$result$forward_part"
+    elif [[ -n "$forward_part" ]]; then
+        result="${forward_part#*/}"
+    fi
+
+    echo "$result"
+}
+

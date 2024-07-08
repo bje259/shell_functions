@@ -1,4 +1,7 @@
 return {
+  { "tjdevries/ocaml.nvim" },
+  { "tjdevries/lsp_extensions.nvim" },
+  { "tjdevries/nlua.nvim" },
   {
     "jay-babu/mason-null-ls.nvim",
     event = { "BufReadPre", "BufNewFile" },

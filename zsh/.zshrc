@@ -6,6 +6,7 @@ export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_CACHE_HOME="$HOME/.cache"
 export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_STATE_HOME="$HOME/.local/state"
+export _Z_CMD="zz"
 
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
@@ -355,3 +356,4 @@ export ZSH_STARTUP_COMPLETE=true
 
 # opam configuration
 [[ ! -r /Users/bradleyeuell/.opam/opam-init/init.zsh ]] || source /Users/bradleyeuell/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
+eval "$(zoxide init zsh)"

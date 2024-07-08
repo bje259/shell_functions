@@ -33,7 +33,7 @@ end
 # Unset irrelevant variables.
 deactivate nondestructive
 
-set -gx VIRTUAL_ENV "/Users/bradleyeuell/.local/share/nvim/mason/packages/sqlfluff/venv"
+set -gx VIRTUAL_ENV "/Users/bradleyeuell/dotfiles/nvim/.local/share/nvim/mason/packages/sqlfluff/venv"
 
 set -gx _OLD_VIRTUAL_PATH $PATH
 set -gx PATH "$VIRTUAL_ENV/bin" $PATH

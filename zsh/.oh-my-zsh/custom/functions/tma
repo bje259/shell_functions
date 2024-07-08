@@ -1,0 +1,70 @@
+tma() {
+    local currentSession currentWindow panes line # Check if inside tmux
+    if [ -n "$TMUX" ]; then
+        tmux switch-client -t $(tmux list-sessions | while read -r session; do
+            sessionPrefix="${session%%:*}"
+            sessionSuffix="${session#*:}"
+            echo "$sessionPrefix -$sessionSuffix"
+            tmux list-windows -t "$sessionPrefix" | while read -r windowLine; do
+                currentWindow="${windowLine%%:*}"
+                widnowSuffix="${windowLine##*:}"
+                echo "$sessionPrefix:$currentWindow - $widnowSuffix"
+                tmux list-panes -t "$sessionPrefix:$currentWindow" | while read -r paneLine; do
+                  panePrefix="${paneLine%%:*}"
+                  paneSuffix="${paneLine##*:}"
+                  echo "$sessionPrefix:$currentWindow.$panePrefix - $paneSuffix"
+                done
+            done
+        # done | fzf --reverse | awk -F ' -' "{print \$1}")
+        done | fzf --delimiter='[.: -]' --reverse --preview "tmux capture-pane -p -t {1}:{2}.{3}" | awk -F ' -' "{print \$1}")
+        # done | fzf --delimiter='[.: -]' --reverse --preview "echo tmux capture-pane -p -t {1}:{2}.{3}" | awk -F ' -' "{print \$1}")
+    else
+        tmux attach-session -t $(tmux list-sessions | while read -r session; do
+            sessionPrefix="${session%%:*}"
+            sessionSuffix="${session#*:}"
+            echo "$sessionPrefix -$sessionSuffix"
+            tmux list-windows -t "$sessionPrefix" | while read -r windowLine; do
+                currentWindow="${windowLine%%:*}"
+                widnowSuffix="${windowLine##*:}"
+                echo "$sessionPrefix:$currentWindow - $widnowSuffix"
+                tmux list-panes -t "$sessionPrefix:$currentWindow" | while read -r paneLine; do
+                  panePrefix="${paneLine%%:*}"
+                  paneSuffix="${paneLine##*:}"
+                  echo "$sessionPrefix:$currentWindow.$panePrefix - $paneSuffix"
+                done
+            done
+        # done | fzf --reverse | awk -F ' -' "{print \$1}")
+        done | fzf --delimiter='[.: -]' --reverse --preview "tmux capture-pane -p -t {1}:{2}.{3}" | awk -F ' -' "{print \$1}")
+        # done | fzf --delimiter='[.: -]' --reverse --preview "echo tmux capture-pane -p -t {1}:{2}.{3}" | awk -F ' -' "{print \$1}")
+    fi
+}
+
+
+
+
+    # done | fzf --reverse | awk -F ': ' '{print $1}' | xargs printf "tmux attach-session -t%s\n"
+    # done | fzf --reverse | awk -F ': ' '{print $1}' | xargs printf "tmux switch-client -t%s\n"
+    #
+    #
+    # tmux list-sessions | awk -F: '{print $1}' | while read -r session; do
+    #     echo "Session $session"
+    #     tmux list-windows -t "$session" | while read -r windowLine; do
+    #         echo "$session:$windowLine"
+    #         currentWindow="${windowLine%%:*}"
+    #         tmux list-panes -t "$session:$currentWindow" | while read -r paneLine; do
+    #             echo "$session:$currentWindow.$paneLine"
+    #         done
+    #     done
+    # done | fzf --reverse | awk -F ': ' '{print $1}' | xargs -I {} $tmux_command {}
+
+
+
+#tma() {
+#    autoload -Uz tma_aux
+#    eval "$(tma_aux)"
+#}
+
+
+#    done | fzf --reverse | awk -F ': ' '{print $1}' | xargs printf "$tmux_command %s\n"
+
+
