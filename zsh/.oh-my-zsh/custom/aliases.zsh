@@ -30,3 +30,4 @@ do
         echo $panes | awk -v currentSession="$currentSession" -v currentWindow="$currentWindow" "{OFS=\"\" ; print currentSession,\":\"currentWindow,\".\",\$0}"
         fi
 done | fzf --reverse | awk -F ": " "{print \$1}")'
+alias oe='eval $(opam env)'
