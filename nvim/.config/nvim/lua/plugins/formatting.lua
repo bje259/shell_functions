@@ -45,6 +45,11 @@ return {
     opts = {
       formatters_by_ft = {
         ["ocaml"] = { "ocamlformat" },
+        ["ocaml.interface"] = { "ocamlformat" },
+        ["ocaml.menhir"] = { "ocamlformat" },
+        ["ocaml.cram"] = { "ocamlformat" },
+        ["ocaml.mlx"] = { "ocamlformat" },
+        ["ocaml.ocamllex"] = { "ocamlformat" },
       },
     },
   },
@@ -55,6 +60,7 @@ return {
       local nls = require("null-ls")
       opts.sources = opts.sources or {}
       table.insert(opts.sources, nls.builtins.formatting.ocamlformat)
+      table.insert(opts.sources, nls.builtins.diagnostics.mypy)
     end,
   },
 }

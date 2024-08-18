@@ -48,7 +48,7 @@ return {
         -- dap.adapters.nlua = function(callback, conf)
         --   local adapter = {
         --     type = "server",
-        --     host = conf.host or "127.0.0.1",
+        --     host = conf.host or "127.0.0.1  ",
         --     port = conf.port or 4711,
         --   }
         --   if conf.start_neovim then

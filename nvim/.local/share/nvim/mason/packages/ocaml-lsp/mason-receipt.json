@@ -1,1 +1,0 @@
-{"primary_source":{"id":"pkg:opam\/ocaml-lsp-server@1.17.0","type":"registry+v1"},"schema_version":"1.1","secondary_sources":[],"name":"ocaml-lsp","metrics":{"start_time":1720583568153,"completion_time":1720583570632},"links":{"share":{},"bin":{"ocamllsp":"bin\/ocamllsp"},"opt":{}}}

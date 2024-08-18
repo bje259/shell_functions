@@ -11,3 +11,13 @@
 **/.vscode/
 .idea
 nvim/.local/share/nvim/lazy/bufferline.nvim
+cursor/.degit/github/LexiFi/lrt
+nvim/.local/share/nvim/harpoon/*.json
+nvim/.local/share/nvim/lazy/**/**
+nvim/.local/share/nvim/mason/packages/debugpy/venv/lib/python3.12/site-packages
+nvim/.local/share/nvim/mason
+nvim/.local/share/nvim/telescope_history
+nvim/.local/share/nvim/.netrwhist
+tmux/.config/tmux/resurrect
+tmux/.tmux/plugins
+tmux/.config/tmux/plugins

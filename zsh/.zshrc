@@ -14,6 +14,9 @@ fi
 
 FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
 
+fpath+=~/.zfunc
+# autoload -Uz compinit && compinit
+
 DISABLE_FZF_KEY_BINDINGS=false
 zstyle ':omz:alpha:lib:git' async-prompt no
 
@@ -243,8 +246,9 @@ export LC_CTYPE='en_US.UTF-8'
 _myPaths=(
     "${HOME}/.local/bin"
     "/usr/local/bin"
-    "/opt/homebrew/bin"
+    "/Library/TeX/texbin"
     "${HOME}/bin"
+    "/opt/homebrew/bin"
 )
 for _path in "${_myPaths[@]}"; do
     if [[ -d ${_path} ]]; then
@@ -331,9 +335,14 @@ PERL_MB_OPT="--install_base \"/Users/bradleyeuell/perl5\""; export PERL_MB_OPT
 PERL_MM_OPT="INSTALL_BASE=/Users/bradleyeuell/perl5"; export PERL_MM_OPT
 
 # Python setup
-eval "$(pyenv virtualenv-init -)"
-export HELPDIR="~/zsh_help"
 
+export PYENV_ROOT="$HOME/.pyenv"
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+
+
+export HELPDIR="~/zsh_help"
 # Remove the default of run-help being aliased to man
 unalias run-help
 # Use zsh's run-help, which will display information for zsh builtins.
@@ -349,6 +358,10 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 # Bind the toggle function to Ctrl+T for vi command mode
 bindkey -M vicmd '^T' toggle_key_mode
 
+eval "$(ssh-agent -s)" > /dev/null
+ssh-add -K ~/.ssh/id_rsa &>/dev/null
+
+export PATH="/opt/homebrew/opt/sqlite3/bin:$PATH"
 
 complete -C '/usr/local/bin/aws_completer' aws
 

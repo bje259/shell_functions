@@ -1,1 +1,0 @@
-{"secondary_sources":[],"name":"js-debug-adapter","primary_source":{"type":"registry+v1","id":"pkg:github\/microsoft\/vscode-js-debug@v1.91.0"},"metrics":{"start_time":1719550027238,"completion_time":1719550027826},"links":{"share":{},"opt":{},"bin":{"js-debug-adapter":"js-debug-adapter"}},"schema_version":"1.1"}

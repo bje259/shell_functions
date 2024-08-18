@@ -31,3 +31,7 @@ do
         fi
 done | fzf --reverse | awk -F ": " "{print \$1}")'
 alias oe='eval $(opam env)'
+alias co='colorize_output'
+alias ez='exec zsh'
+alias lls='ls_with_truepath'
+alias dut='dune utop'

@@ -1,8 +1,0 @@
-(lang dune 3.16)
-(name earlybird)
-(version 1.3.2)
-(sections (lib .) (bin ../../bin) (doc ../../doc/earlybird))
-(files
- (lib (META dune-package opam))
- (bin (ocamlearlybird))
- (doc (CHANGELOG.md LICENSE README.md)))

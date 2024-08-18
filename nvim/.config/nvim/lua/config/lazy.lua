@@ -5,6 +5,7 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
   -- stylua: ignore
   vim.fn.system({ "git", "clone", "--filter=blob:none", "https://github.com/folke/lazy.nvim.git", "--branch=stable", lazypath })
 end
+vim.opt.rtp:prepend("/opt/homebrew/opt/fzf")
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
@@ -51,86 +52,333 @@ local function new_buffer_with_filetype(ft)
   vim.cmd("setfiletype " .. ft) -- Set the filetype
 end
 
--- Register the keybindings with which-key
-wk.register({
-  tn = {
-    name = "Temporary New Filetypes",
-    j = {
-      function()
-        new_buffer_with_filetype("json")
-      end,
-      "New buffer with JSON",
-    },
-    l = {
-      function()
-        new_buffer_with_filetype("lua")
-      end,
-      "New buffer with Lua",
-    },
-    p = {
-      function()
-        new_buffer_with_filetype("python")
-      end,
-      "New buffer with Python",
-    },
-    h = {
-      function()
-        new_buffer_with_filetype("html")
-      end,
-      "New buffer with HTML",
-    },
-    z = {
-      function()
-        new_buffer_with_filetype("zsh")
-      end,
-      "Set filetype to Zsh",
-    },
-
-    -- Add more filetypes as needed
-  },
-}, { prefix = "<leader>" }) -- Ensure which-key is loaded
-
--- local wk = require("which-key")
---
--- Define a function to set filetype
 local function set_filetype(ft)
   vim.cmd("setfiletype " .. ft)
 end
---
 -- Register the keybindings with which-key
-wk.register({
-  t = {
-    name = "Temporary Filetypes",
-    j = {
+wk.add({
+  {
+    mode = "n",
+    "<leader>t",
+    group = "filetype",
+    {
+      "<leader>tj",
       function()
         set_filetype("json")
       end,
-      "Set filetype to JSON",
+      desc = "Set filetype to JSON",
     },
-    l = {
+    {
+      "<leader>tl",
       function()
         set_filetype("lua")
       end,
-      "Set filetype to Lua",
+      desc = "Set filetype to Lua",
     },
-    p = {
+    {
+      "<leader>tp",
       function()
         set_filetype("python")
       end,
-      "Set filetype to Python",
+      desc = "Set filetype to Python",
     },
-    h = {
+    {
+      "<leader>th",
       function()
         set_filetype("html")
       end,
-      "Set filetype to HTML",
+      desc = "Set filetype to HTML",
     },
-    z = {
+    {
+      "<leader>tz",
       function()
         set_filetype("zsh")
       end,
-      "Set filetype to Zsh",
+      desc = "Set filetype to Zsh",
     },
-    -- Add more filetypes as needed
+    {
+      "<leader>to",
+      function()
+        set_filetype("ocaml")
+      end,
+      desc = "Set filetype to Ocaml",
+    },
+
+    {
+      mode = "n",
+      {
+        "<leader>tn",
+        group = "temporary new buffer",
+        {
+          {
+            "<leader>tnj",
+            function()
+              new_buffer_with_filetype("json")
+            end,
+            desc = "New buffer with JSON",
+          },
+          {
+            "<leader>tnl",
+            function()
+              new_buffer_with_filetype("lua")
+            end,
+            desc = "New buffer with Lua",
+          },
+          {
+            "<leader>tnp",
+            function()
+              new_buffer_with_filetype("python")
+            end,
+            desc = "New buffer with Python",
+          },
+          {
+            "<leader>tnh",
+            function()
+              new_buffer_with_filetype("html")
+            end,
+            desc = "New buffer with HTML",
+          },
+          {
+            "<leader>tnz",
+            function()
+              new_buffer_with_filetype("zsh")
+            end,
+            desc = "Set filetype to Zsh",
+          },
+          {
+            "<leader>tno",
+            function()
+              new_buffer_with_filetype("ocaml")
+            end,
+            desc = "Set filetype to Ocaml",
+          },
+        },
+      },
+    },
   },
-}, { prefix = "<leader>" })
+})
+--   tn = {
+--     name = "Temporary New Filetypes",
+--     j = {
+--       function()
+--         new_buffer_with_filetype("json")
+--       end,
+--       "New buffer with JSON",
+--     },
+--     l = {
+--       function()
+--         new_buffer_with_filetype("lua")
+--       end,
+--       "New buffer with Lua",
+--     },
+--     p = {
+--       function()
+--         new_buffer_with_filetype("python")
+--       end,
+--       "New buffer with Python",
+--     },
+--     h = {
+--       function()
+--         new_buffer_with_filetype("html")
+--       end,
+--       "New buffer with HTML",
+--     },
+--     z = {
+--       function()
+--         new_buffer_with_filetype("zsh")
+--       end,
+--       "Set filetype to Zsh",
+--     },
+--     -- Add more filetypes as needed
+--   },
+-- },
+
+-- wk.register({
+--   tn = {
+--     name = "Temporary New Filetypes",
+--     j = {
+--       function()
+--         new_buffer_with_filetype("json")
+--       end,
+--       "New buffer with JSON",
+--     },
+--     l = {
+--       function()
+--         new_buffer_with_filetype("lua")
+--       end,
+--       "New buffer with Lua",
+--     },
+--     p = {
+--       function()
+--         new_buffer_with_filetype("python")
+--       end,
+--       "New buffer with Python",
+--     },
+--     h = {
+--       function()
+--         new_buffer_with_filetype("html")
+--       end,
+--       "New buffer with HTML",
+--     },
+--     z = {
+--       function()
+--         new_buffer_with_filetype("zsh")
+--       end,
+--       "Set filetype to Zsh",
+--     },
+--
+--     -- Add more filetypes as needed
+--   },
+-- }, { prefix = "<leader>" }) -- Ensure which-key is loaded
+--
+-- local wk = require("which-key")
+--
+-- Define a function to set filetype
+--
+-- Register the keybindings with which-key
+-- wk.add({
+--   ["<leader>"] = {
+--     t = {
+--       name = "Set Filetypes",
+--       j = {
+--         function()
+--           new_buffer_with_filetype("json")
+--         end,
+--         "New buffer with JSON",
+--       },
+--       l = {
+--         function()
+--           new_buffer_with_filetype("lua")
+--         end,
+--         "New buffer with Lua",
+--       },
+--       p = {
+--         function()
+--           new_buffer_with_filetype("python")
+--         end,
+--         "New buffer with Python",
+--       },
+--       h = {
+--         function()
+--           new_buffer_with_filetype("html")
+--         end,
+--         "New buffer with HTML",
+--       },
+--       z = {
+--         function()
+--           new_buffer_with_filetype("zsh")
+--         end,
+--         "Set filetype to Zsh",
+--       },
+--       -- Add more filetypes as needed
+--     },
+--   },
+-- })
+
+-- wk.register({
+--   t = {
+--     name = "Temporary Filetypes",
+--     j = {
+--       function()
+--         set_filetype("json")
+--       end,
+--       "Set filetype to JSON",
+--     },
+--     l = {
+--       function()
+--         set_filetype("lua")
+--       end,
+--       "Set filetype to Lua",
+--     },
+--     p = {
+--       function()
+--         set_filetype("python")
+--       end,
+--       "Set filetype to Python",
+--     },
+--     h = {
+--       function()
+--         set_filetype("html")
+--       end,
+--       "Set filetype to HTML",
+--     },
+--     z = {
+--       function()
+--         set_filetype("zsh")
+--       end,
+--       "Set filetype to Zsh",
+--     },
+--     -- Add more filetypes as needed
+--   },
+-- }, { prefix = "<leader>" })
+--
+-- Define the function to diff with a register
+
+-- Define the function to diff with a register
+-- _G.diff_with_register = function(register)
+--   -- Yank selected text to register 'z'
+--   vim.cmd("normal! y")
+--
+--   -- Open a new vertical split and create a new empty buffer
+--   vim.cmd("vsplit")
+--   vim.cmd("enew")
+--
+--   -- Put the contents of the specified register into the new buffer
+--   vim.cmd("put " .. register)
+--
+--   -- Set the buffer type to nofile
+--   vim.bo.buftype = "nofile"
+--
+--   -- Enable diff mode for the new buffer
+--   vim.cmd("diffthis")
+--
+--   -- Switch back to the original window
+--   vim.cmd("wincmd p")
+--
+--   -- Put the contents of register 'z' in the original buffer
+--   vim.cmd("put +")
+--
+--   -- Enable diff mode for the original buffer
+--   vim.cmd("diffthis")
+-- end
+--
+-- -- Map the function to a key combination for easy usage in visual mode
+-- vim.api.nvim_set_keymap("x", "<leader>fd", [[:lua diff_with_register('*')<CR>]], { noremap = true, silent = true })
+
+-- Define the function to diff with a register
+_G.diff_with_register = function(register)
+  -- Yank selected text to register 'z'
+  -- vim.cmd('normal! "ay')
+
+  -- Save the filetype of the current buffer
+  local filetype = vim.bo.filetype
+
+  -- Open a new vertical split and create a new empty buffer
+  vim.cmd("vsplit")
+  vim.cmd("enew")
+
+  -- Put the contents of the specified register into the new buffer
+  vim.cmd("put " .. register)
+
+  -- Set the buffer type to nofile
+  vim.bo.buftype = "nofile"
+
+  -- Apply the filetype to the new buffer
+  vim.cmd("setlocal filetype=" .. filetype)
+
+  -- Enable diff mode for the new buffer
+  vim.cmd("diffthis")
+
+  -- Switch back to the original window
+  vim.cmd("wincmd p")
+
+  -- vim.cmd("normal! g")
+  -- Put the contents of register 'z' in the original buffer
+  -- vim.cmd("put +")
+
+  -- Enable diff mode for the original buffer
+  vim.cmd("diffthis")
+end
+
+-- Map the function to a key combination for easy usage in visual mode
+vim.api.nvim_set_keymap("x", "<leader>fd", [[:lua _G.diff_with_register('+')<CR>]], { noremap = true, silent = true })
