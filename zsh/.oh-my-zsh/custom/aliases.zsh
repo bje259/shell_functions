@@ -5,8 +5,8 @@ alias zshconfig="nvim ~/.zshrc"
 alias ohmyzsh="nvim ~/.oh-my-zsh"
 alias la="gls -GA --color=auto"
 alias ll="gls -Gl --color=auto"
-alias ls="gls --color=auto"
-alias lla="gls -Al --color=auto"
+#alias ls="gls --color=auto"
+alias lla="ls -Al --color=auto"
 alias zalias="nvim ~/.oh-my-zsh/custom/aliases.zsh"
 alias sourcea="source ~/.zshrc"
 alias dircolors='gdircolors'
@@ -35,3 +35,4 @@ alias co='colorize_output'
 alias ez='exec zsh'
 alias lls='ls_with_truepath'
 alias dut='dune utop'
+alias lzd='lazydocker'

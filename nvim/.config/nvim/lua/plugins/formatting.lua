@@ -42,16 +42,54 @@ return {
   {
     "stevearc/conform.nvim",
     optional = true,
-    opts = {
-      formatters_by_ft = {
+    opts = function(_, opts)
+      opts.formatters_by_ft = opts.formatters_by_ft or {}
+      -- for _, ft in ipairs(supported) do
+      --   opts.formatters_by_ft[ft] = { "prettier" }
+      -- end
+      opts.formatters_by_ft = {
         ["ocaml"] = { "ocamlformat" },
         ["ocaml.interface"] = { "ocamlformat" },
         ["ocaml.menhir"] = { "ocamlformat" },
         ["ocaml.cram"] = { "ocamlformat" },
         ["ocaml.mlx"] = { "ocamlformat" },
         ["ocaml.ocamllex"] = { "ocamlformat" },
-      },
-    },
+        ["json"] = { "prettier" },
+        ["yaml"] = { "prettier" },
+        ["toml"] = { "prettier" },
+        ["html"] = { "prettier" },
+        ["css"] = { "prettier" },
+        ["scss"] = { "prettier" },
+        ["less"] = { "prettier" },
+        ["javascript"] = { "prettier" },
+        ["javascript.jsx"] = { "prettier" },
+        ["typescript"] = { "prettier" },
+        ["typescript.tsx"] = { "prettier" },
+        ["javascriptreact"] = { "prettier" },
+        ["typescriptreact"] = { "prettier" },
+        ["vue"] = { "prettier" },
+        ["svelte"] = { "prettier" },
+        ["markdown"] = { "prettier" },
+        ["graphql"] = { "prettier" },
+        ["jsonc"] = { "prettier" },
+        ["json5"] = { "prettier" },
+        ["lua"] = { "stylua" },
+        ["fish"] = { "fish_indent" },
+        ["sh"] = { "shfmt" },
+        ["dockerfile"] = { "dockerfilelint" },
+        ["dockerfile.dockerfile"] = { "dockerfilelint" },
+      }
+      -- for ftype, fmtr in pairs(formatters_by_ft_temp) do
+      --   opts.formatters_by_ft[ftype] = fmtr[0]
+      -- end
+
+      -- opts.formatters = opts.formatters or {}
+      -- opts.formatters.prettier = {
+      --   condition = function(_, ctx)
+      --     return M.has_parser(ctx) and (vim.g.lazyvim_prettier_needs_config ~= true or M.has_config(ctx))
+      --   end,
+      -- }
+    end,
   },
   {
     "nvimtools/none-ls.nvim",

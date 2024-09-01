@@ -44,6 +44,32 @@ plugins=(
     toggle_key_mode
     brew
     AWS
+    fd
+    docker
+    docker-compose
+    gh
+    github
+    gitignore
+    gpg-agent
+    gnu-utils
+    golang
+    keychain
+    node
+    npm
+    nvm
+    perl
+    poetry
+    poetry-env
+    pyenv
+    python
+    ripgrep
+    rsync
+    ssh
+    sudo
+    thefuck
+    tmux
+    zoxide
+
 )
 # plugins=()
 
@@ -137,7 +163,7 @@ custom_plugins=(
     marlonrichert/zsh-hist              # Run hist -h for help
     reegnz/jq-zsh-plugin                # Write interactive jq queries (Requires jq and fzf)
     MichaelAquilina/zsh-you-should-use  # Recommends aliases when typed
-    rupa/z                              # Tracks your most used directories, based on 'frequency'
+rupa/z                              # Tracks your most used directories, based on 'frequency'
 
     # Additional completions
     #sudosubin/zsh-github-cli
@@ -200,7 +226,7 @@ fi
 function zshup () {
   local plugindir="${ZPLUGINDIR:-$HOME/.zsh/plugins}"
   for d in $plugindir/*/.git(/); do
-    echo "Updating ${d:h:t}..."
+echo "Updating ${d:h:t}..."
     command git -C "${d:h}" pull --ff --recurse-submodules --depth 1 --rebase --autostash
   done
 }
@@ -350,6 +376,10 @@ autoload run-help
 
 source ~/powerlevel10k/powerlevel10k.zsh-theme
 
+source /Users/bradleyeuell/dotfiles/tmux/.config/tmux/plugins/tmux-sidebar/scripts/funcs.sh
+alias cd='cdsb'
+tmux bind -N "SetTreeDepth" C-d command-prompt -p "Enter new depth: " "run-shell '/Users/bradleyeuell/dotfiles/tmux/.config/tmux/plugins/tmux-sidebar/scripts/setdepth.sh %%'"
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
@@ -358,8 +388,17 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 # Bind the toggle function to Ctrl+T for vi command mode
 bindkey -M vicmd '^T' toggle_key_mode
 
-eval "$(ssh-agent -s)" > /dev/null
-ssh-add -K ~/.ssh/id_rsa &>/dev/null
+# eval "$(ssh-agent -s)" > /dev/null
+# ssh-add -K ~/.ssh/id_rsa &>/dev/null
+unset SSH_AGENT_PID
+agent_sock=$(gpgconf --list-dirs agent-socket)
+export GPG_AGENT_INFO=${agent_sock}:0:1
+export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
+gpg-connect-agent updatestartuptty /bye > /dev/null
+
+gpgconf --launch gpg-agent
+# export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
+
 
 export PATH="/opt/homebrew/opt/sqlite3/bin:$PATH"
 
@@ -367,6 +406,7 @@ complete -C '/usr/local/bin/aws_completer' aws
 
 export ZSH_STARTUP_COMPLETE=true
 
+source $ZSH/custom/completions/filebot
 # opam configuration
 [[ ! -r /Users/bradleyeuell/.opam/opam-init/init.zsh ]] || source /Users/bradleyeuell/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
 eval "$(zoxide init zsh)"
