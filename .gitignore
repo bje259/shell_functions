@@ -20,5 +20,5 @@ nvim/.local/share/nvim/telescope_history
 nvim/.local/share/nvim/.netrwhist
 tmux/.config/tmux/resurrect
 tmux/.tmux/plugins
-tmux/.config/tmux/plugins
+#tmux/.config/tmux/plugins
 misc/.config/filezilla/filezilla.xml
