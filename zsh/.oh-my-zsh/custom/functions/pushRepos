@@ -1,8 +1,0 @@
-pushRepos() {
-  for image in $(docker images registry.home:5005/* --format "{{.Repository}}:{{.Tag}}"); do
-    cmd=$(printf 'docker push -q %s' "$image")
-    echo "executing $cmd"
-    eval "$cmd"
-  done
-  echo "tasks complete"
-}

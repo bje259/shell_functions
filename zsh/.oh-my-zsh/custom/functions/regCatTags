@@ -1,8 +1,0 @@
-regCatTags () {
-  repos=$(curl -s http://registry.home/v2/_catalog | jq -r '.repositories | .[]')
-  for repo in "${(f)repos}"
-    do
-      tags=$(curl -s "http://registry.home/v2/$repo/tags/list")
-      echo "$tags" | jq '.'
-    done | jq -s '.'
-}
