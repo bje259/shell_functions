@@ -1,24 +1,13 @@
+*.tar
+*.tar.*
+*.jar
+*.exe
+*.msi
+*.zip
+*.tgz
+*.log
+*.log.*
+*.sig
 
-# custom files
-
-# temp files directories
-**/cache/
-**/log/
-*.swp
-.DS_Store
-
-# editor configs
-**/.vscode/
-.idea
-nvim/.local/share/nvim/lazy/bufferline.nvim
-cursor/.degit/github/LexiFi/lrt
-nvim/.local/share/nvim/harpoon/*.json
-nvim/.local/share/nvim/lazy/**/**
-nvim/.local/share/nvim/mason/packages/debugpy/venv/lib/python3.12/site-packages
-nvim/.local/share/nvim/mason
-nvim/.local/share/nvim/telescope_history
-nvim/.local/share/nvim/.netrwhist
-tmux/.config/tmux/resurrect
-tmux/.tmux/plugins
-#tmux/.config/tmux/plugins
-misc/.config/filezilla/filezilla.xml
+pkg/
+src/

@@ -1,1 +1,0 @@
-/Users/bradleyeuell/.zsh/plugins//
