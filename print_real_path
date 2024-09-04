@@ -1,0 +1,12 @@
+
+  print_real_path() {
+    local input_path=$1
+    # echo "$input_path" >&2
+    if [ -L "$input_path" ]; then
+      local true_path
+      true_path=$(realpath "$input_path")
+      echo " -> $true_path"
+    else
+      echo "-L failed"
+    fi
+  }

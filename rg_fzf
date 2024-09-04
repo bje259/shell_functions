@@ -1,0 +1,28 @@
+# Function: rg_fzf
+# Description: This function uses ripgrep (rg) and fzf to search for patterns in files and preview results.
+# Usage: 
+#   rg_fzf [search_pattern]
+#     - If search_pattern is provided, rg searches for it in the files.
+#     - If no search_pattern is provided, rg searches for all files using the pattern '.*'.
+
+function rg_fzf() {
+  local search_pattern="$1"
+  
+  if [ -z "$search_pattern" ]; then
+    # If no pattern is provided, search for all files
+    rg --line-number --no-heading --color=always -P .* | \
+      fzf --ansi --preview 'echo {} | awk -F: "{print \$1}" | xargs bat --style=numbers --color=always --line-range=:500' | \
+      awk -F: '{print $1 " +" $2}' | \
+      xargs -r nvim
+  else
+    echo "Search pattern: $search_pattern"
+    
+    rg --line-number --no-heading --color=always -P "$search_pattern" | \
+      fzf --ansi --preview 'echo {} | awk -F: "{print \$1}" | xargs bat --style=numbers --color=always --line-range=:500' | \
+      awk -F: '{print $1 " +" $2}' | \
+      xargs -r nvim
+  fi
+}
+
+# Usage example:
+# rg_fzf "*.*"

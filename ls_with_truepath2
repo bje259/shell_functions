@@ -1,0 +1,42 @@
+ls_with_truepath2() {
+  # Function to print true path
+  print_true_path() {
+    local input_path=$1
+    if [ -e "$input_path" ]; then
+      local true_path
+      true_path=$(realpath "$input_path")
+      if [ "$input_path" != "$true_path" ]; then
+        echo " -> $true_path"
+      fi
+    else
+      echo "Path does not exist"
+    fi
+  }
+
+  # Check if directory is provided
+  local dir
+  if [ -z "$1" ]; then
+    dir="."
+  else
+    dir="$1"
+  fi
+  
+  local recCount=0
+  # List files with ls -Al and add true path info
+  ls -Al "$dir" | while read -r line; do
+    (( recCount++ ))
+      local filenm=""
+    if [[ $recCount -gt 1 ]] ; then
+      # Extract the file name from the ls output
+      filenm=$(echo "$line" | awk '{for(i=9;i<=NF;++i) printf $i""FS; print ""}' | sed 's/[[:space:]]*$//')
+
+      # Print the original ls output
+      echo -n "$line"
+
+      # Print the true path if the file exists and differs
+      if [ -n "$filenm" ]; then
+        print_true_path "$dir/$filenm"
+      fi
+    fi
+  done 
+}

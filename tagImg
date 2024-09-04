@@ -1,0 +1,34 @@
+# tagImg() {
+#   currentRepo="$1"
+#   currentImg="$2"
+#   currentTag="$3"
+#   newRepo="$4"
+#   newTag="$5"
+#   printf 'Img: %s\nCurrent repo: %s\nCurrent tag: %s\nNew repo: %s\nNew tag: %s\n' "$currentImg" "$currentRepo" "$currentTag" "$newRepo" "$newTag"
+#   echo "with command: docker tag $currentRepo/$currentImg:$currentTag $newRepo/$currentImg:$newTag"
+#   # docker tag "$currentRepo/$currentImg:$currentTag $newRepo/$currentImg:$newTag"
+#   echo "tagging done"
+# }
+
+tagImg() {
+  currentRepo="$1"
+  currentImg="$2"
+  currentTag="$3"
+  newRepo="$4"
+  newTag="$5"
+  newImg="${6:=$currentImg}"
+  currentRepo=$(
+    if [[ ! -z "$currentRepo" ]]; then
+      echo "$currentRepo/"
+    else
+      echo "$currentRepo"
+    fi
+  )
+  printf 'Img: %s\nCurrent repo: %s\nCurrent tag: %s\nNew repo: %s\nNew tag: %s\nNewImg: %s\n' "$currentImg" "$currentRepo" "$currentTag" "$newRepo" "$newTag" "$newImg"
+  echo "with command: docker tag $currentRepo$currentImg:$currentTag $newRepo/$newImg:$newTag"
+  test=$(echo "docker tag \"$currentRepo$currentImg:$currentTag\" \"$newRepo/$newImg:$newTag\"")
+  latestTest=$(echo "docker tag \"$currentRepo$currentImg:$currentTag\" \"$newRepo/$newImg"":latest\"")
+  eval "$test"
+  eval "$latestTest"
+  echo "tagging done"
+}

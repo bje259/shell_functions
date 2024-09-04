@@ -1,0 +1,28 @@
+function ZmainRemGrpFunc() {
+    local debug=false
+    local inputString=$1
+    local temp=$inputString
+    local curCount=0
+    if $debug; then
+        echo "Initial temp: $temp" >&2
+    fi
+    #temp dbl quotes to handle spaces
+    curCount=$(echo "$temp" | grep -Eo "\[|\(" | wc -w | xargs)
+    if $debug; then
+        echo "curCount: $curCount" >&2
+    fi
+    
+    for (( i=1; i<=curCount; i++ )); do
+        if $debug; then
+            echo "Iteration: $i" >&2
+        fi
+        temp=$(ZremGrpFunc "$temp")
+        if $debug; then
+            echo "Updated temp: $temp" >&2
+        fi
+    done
+    if $debug; then
+        echo "Final temp: $temp" >&2
+    fi
+    echo "$temp"
+}
